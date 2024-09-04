@@ -1,0 +1,232 @@
+/* General Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #3e8e41; /* Darker green */
+}
+
+/* Hero Section Styles */
+.hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Video Section Styles */
+.video {
+    padding: 20px;
+    text-align: center;
+}
+
+/* About Section Styles */
+.about {
+    padding: 30px;
+}
+
+.about h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Featured Projects Section Styles */
+.featured-projects {
+    padding: 30px;
+}
+
+.featured-projects h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#project-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-card {
+    /* Add your styles for project card */
+    width: 200px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+.featured-projects {
+    background-color: #f7f7f7;
+    padding: 20px;
+  }
+  
+  .featured-projects ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .featured-projects li {
+    margin: 20px;
+    width: 250px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .featured-projects .project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .featured-projects img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .featured-projects h3 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .featured-projects p {
+    font-size: 14px;
+    color: #666;
+    flex: 1;
+    margin-bottom: 10px;
+  }
+  
+  .featured-projects .btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: auto;
+  }
+  
+  .featured-projects .btn:hover {
+    background-color: #0069d9;
+  }
+
+/* Ribbon Styles (Corrected) */
+.ribbon {
+    background-image: url('wallpaper1.png'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    padding: 5px; /* Increase padding to 40px to make room for the taller ribbon */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Add this to position the ribbon text and video */
+}
+
+.ribbon-text {
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
+    position: relative; /* Add this to position the ribbon text */
+    z-index: 1; /* Place the text on top of the video */
+    color: rgb(41, 41, 41);
+    
+}
+
+
+
+/* Centered Buttons with Rounded Corners and Pale Purple Background (Corrected) */
+.centered-buttons {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.centered-buttons a {
+    display: inline-block;
+    background-color: #6b5996; /* Pale purple background */
+    color: #ffffff; /* White text color */
+    border: none;
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none; /* Add this to remove default link underline */
+}
+
+.centered-buttons a:hover {
+    background-color: #765580; /* Slightly darker pale purple on hover */
+}
+
+
+
+
+
+  
+  .image-tab iframe {
+  
+    width: 400px;
+  
+    height: 225px;
+  
+    border: none;
+  
+    border-radius: 4px;
+  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  }

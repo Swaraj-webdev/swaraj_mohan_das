@@ -1,0 +1,80 @@
+<html>
+    <body>
+        <style>
+            body{
+                background-color: rgb(34, 34, 34);
+                text-align: center;
+                -webkit-text-fill-color: aliceblue;
+                margin-top: 300px;
+                margin-bottom: 300px;
+                font-size: 5vw;
+            }
+
+            button{
+                text-align: end;
+                background-color: rgb(111, 184, 123);
+                font-size: 2vw;
+                -webkit-text-fill-color: aliceblue;
+            }
+        </style>
+
+        <button id="mybutton">Use again</button>
+        <script>
+        function sieveOfEratosthenes(limit) {
+  const sieve = new Array(limit + 1);
+  sieve.fill(true);
+  sieve[0] = sieve[1] = false;
+
+  for (let i = 2; i * i <= limit; i++) {
+    if (sieve[i]) {
+      for (let j = i * i; j <= limit; j += i) {
+        sieve[j] = false;
+      }
+    }
+  }
+
+  const primes = [];
+  for (let p = 2; p <= limit; p++) {
+    if (sieve[p]) {
+      primes.push(p);
+    }
+  }
+
+  return primes;
+}
+
+function main() {
+  // Ask user for input to fix the limit
+  let limit;
+  while (true) {
+    limit = parseInt(prompt("Enter the limit for prime number generation (up to 2^31 - 1): "), 10);
+    if (limit >= 2) {
+      break;
+    }
+    alert("Invalid input. Please enter a positive integer.");
+  }
+
+  // Generate prime numbers up to the limit using Sieve of Eratosthenes
+  const primes = sieveOfEratosthenes(limit);
+
+  // Print the prime numbers
+  document.write("Prime numbers up to " + limit + " :<br>");
+  document.write(primes.join(", ") + "<br>");
+}
+
+main();
+
+
+const button = document.getElementById("mybutton");
+// Add an event listener to the button
+
+button.addEventListener('click', function() {
+
+  // Open a new HTML file when the button is clicked
+
+  window.open('prime no. generator.html', '_self');
+
+});
+        </script>
+    </body>
+</html>

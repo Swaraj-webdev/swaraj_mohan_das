@@ -1,0 +1,59 @@
+<html>
+    <body>
+        <style>
+            body{
+                background-color: rgb(34, 34, 34);
+                text-align: center;
+                -webkit-text-fill-color: aliceblue;
+                margin-top: 300px;
+                margin-bottom: 300px;
+                margin-left: 300px;
+                margin-right: 300px;
+                font-size: 5vw;
+            }
+
+            button{
+                text-align: end;
+                background-color: rgb(111, 184, 123);
+                font-size: 2vw;
+                -webkit-text-fill-color: aliceblue;
+            }
+        </style>
+
+        <button id="cipher button">Use again</button>
+
+
+        <script> 
+            function caesarCipher(text, shift) {
+    let result = "";
+    for (let char of text) {
+        if (/[a-zA-Z]/.test(char)) {
+            const asciiOffset = char === char.toUpperCase() ? 65 : 97;
+            result += String.fromCharCode((char.charCodeAt(0) - asciiOffset + shift) % 26 + asciiOffset);
+        } else {
+            result += char;
+        }
+    }
+    return result;
+}
+
+const text = prompt("Enter the message to encrypt:");
+const shift = parseInt(prompt("Enter the shift value:"));
+document.write("Encrypted message:  ", caesarCipher(text, shift));
+ // Get the button element
+
+ const button = document.getElementById('cipher button');
+
+
+// Add an event listener to the button
+
+button.addEventListener('click', function() {
+
+  // Open a new HTML file when the button is clicked
+
+  window.open('cipher.html', '_self');
+
+});
+        </script>
+    </body>
+</html>

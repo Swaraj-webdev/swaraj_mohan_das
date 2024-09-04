@@ -1,37 +1,102 @@
-<!-- This Source Code Form is subject to the terms of the Mozilla Public
-   - License, v. 2.0. If a copy of the MPL was not distributed with this file,
-   - You can obtain one at http://mozilla.org/MPL/2.0/. -->
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'none'; object-src 'none'; script-src resource: chrome:; connect-src https:; img-src https: data: blob: chrome:; style-src 'unsafe-inline';"
-    />
-    <meta name="color-scheme" content="light dark" />
-    <title data-l10n-id="newtab-page-title"></title>
-    <link
-      rel="icon"
-      type="image/png"
-      href="chrome://branding/content/icon32.png"
-    />
-    <link rel="localization" href="branding/brand.ftl" />
-    <link rel="localization" href="toolkit/branding/brandings.ftl" />
-    <link rel="localization" href="browser/newtab/newtab.ftl" />
-    <link
-      rel="stylesheet"
-      href="chrome://browser/content/contentSearchUI.css"
-    />
-    <link
-      rel="stylesheet"
-      href="chrome://activity-stream/content/css/activity-stream.css"
-    />
-  </head>
-  <body class="activity-stream">
-    <div id="root"></div>
-    <div id="footer-asrouter-container" role="presentation"></div>
-  </body>
-</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Create</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Ideas</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">sign in</a></li>
+                <li><a href="#">join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+        <div class="ribbon">
+            <div class="ribbon-text">
+              <h2>Create stories, games, and animations. Share with others around the world.</h2>
+            </div>
+            <div class="image-tab">
 
+                <iframe src="image.html" frameborder="0" allowfullscreen width="100%" height="300px"></iframe>
+            
+              </div> 
+          </div>
+          <div class="about">
+            <div class="centered-buttons">
+          
+              <a href="#" id="about-scratch">About</a>
+          
+              <a href="#" id="for-educators">For Educators</a>
+          
+              <a href="#" id="for-students">For Students</a>
+          
+            </div>
+          
+          </div>
+          <section class="featured-projects">
+            <h2>Featured Projects</h2>
+            <ul id="project-list">
+              <li>
+                <div class="project-card">
+                  <img src="ascending-order.png" alt="ascending-order generator">
+                  <h3>Ascending-order Generator</h3>
+                  <p>Tired of manually sorting numbers into ascending order? Introducing the Ascending-Order Generator - the ultimate time-saving solution!</p>
+                  <a href="index.ascending.html" class="btn">View Project</a>
+                </div>
+              </li>
+              <li>
+                <div class="project-card">
+                  <img src="ascending-order.png" alt="desending-order generator">
+                  <h3>Descending-order generator</h3>
+                  <p>Tired of manually sorting numbers into descending order? Introducing the descending-Order Generator - the ultimate time-saving solution!</p>
+                  <a href="index.descending.html" class="btn">View Project</a>
+                </div>
+              </li>
+              <li>
+                <div class="project-card">
+                  <img src="cipher.png" alt="cipher hasher">
+                  <h3>Cipher Hasher</h3>
+                  <p>ntroducing our cutting-edge product, the Cipher Hasher! This innovative tool utilizes a complex hashing algorithm to encrypt data securely, providing top-notch protection for your sensitive information.</p>
+                  <a href="index.cipher.html" class="btn">View Project</a>
+                </div>
+              </li>
+              <li>
+                <div class="project-card">
+                  <img src="https://via.placeholder.com/200x150" alt="Project 1">
+                  <h3>Project 1</h3>
+                  <p>Description of Project 1</p>
+                  <a href="#" class="btn">View Project</a>
+                </div>
+              </li>
+              <li>
+                <div class="project-card">
+                  <img src="https://via.placeholder.com/200x150" alt="Project 1">
+                  <h3>Project 1</h3>
+                  <p>Description of Project 1</p>
+                  <a href="#" class="btn">View Project</a>
+                </div>
+              </li>
+              <li>
+                <div class="project-card">
+                  <img src="https://via.placeholder.com/200x150" alt="Project 1">
+                  <h3>Project 1</h3>
+                  <p>Description of Project 1</p>
+                  <a href="#" class="btn">View Project</a>
+                </div>
+              </li>
+              <!-- Add more projects here -->
+            </ul>
+          </section>
+    <script src="script.js"></script>
+</body>
+</html>

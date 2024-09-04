@@ -1,0 +1,65 @@
+<html>
+    <body>
+        <style>
+            body{
+                background-color: rgb(34, 34, 34);
+                text-align: center;
+                -webkit-text-fill-color: aliceblue;
+                margin-top: 300px;
+                margin-bottom: 300px;
+                font-size: 5vw;
+            }
+
+            button{
+                text-align: end;
+                background-color: rgb(111, 184, 123);
+                font-size: 2vw;
+                -webkit-text-fill-color: aliceblue;
+            }
+        </style>
+
+        <button id="mybutton">Use again</button>
+
+
+        <script> 
+            function quickSort(arr) {
+    if (arr.length <= 1) {
+        return arr;
+    }
+    const pivot = arr[Math.floor(arr.length / 2)];
+    const left = arr.filter(x => x < pivot);
+    const middle = arr.filter(x => x === pivot);
+    const right = arr.filter(x => x > pivot);
+    return quickSort(left).concat(middle, quickSort(right));
+}
+
+// Get input from user
+const userInput = prompt("Enter a list of numbers separated by spaces: ");
+
+// Convert input string to a list of integers
+const arr = userInput.split(' ').map(x => parseInt(x, 10));
+
+// Call the quickSort function
+const sortedArr = quickSort(arr);
+
+// Print the sorted array
+document.write("Sorted array:  ", sortedArr);
+
+
+ // Get the button element
+
+ const button = document.getElementById('mybutton');
+
+
+// Add an event listener to the button
+
+button.addEventListener('click', function() {
+
+  // Open a new HTML file when the button is clicked
+
+  window.open('ascending-order generator.html', '_self');
+
+});
+        </script>
+    </body>
+</html>
